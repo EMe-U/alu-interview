@@ -13,7 +13,7 @@ This repository contains resources to help you prepare for technical interviews 
 
 1. **Clone the repo**:  
    ```bash
-   git clone https://github.com/levishimwe/alu-interview.git
+   git clone https://github.com/EMe-U/alu-interview.git
    ```
 2. **Navigate through the folders** to find practice questions and tips.
 

@@ -1,30 +1,20 @@
 #!/usr/bin/python3
-"""
-Minimum operations to reach n characters
-"""
+"""Minimum Operations"""
+import math
 
 
 def minOperations(n):
-    """
-    Calculates the minimum operations to reach n characters
-
-    Args:
-        n (int): The number of characters to reach
-
-    Returns:
-        int: The minimum operations to reach n characters
-    """
-    # Edge cases [0, 1]
+    """Minimum Operations"""
     if n <= 1:
         return 0
 
-    
-    divisor = 2
+    operations = 0
+    for i in range(2, int(math.sqrt(abs(n))) + 1):
+        while n % i == 0:
+            operations += i
+            n //= i
 
-    while n > 1:
-        if n % divisor == 0:
-            n = n // divisor
-            operations += divisor
-        else:
-            divisor += 1
+    if n > 1:
+        operations += n
+
     return operations
